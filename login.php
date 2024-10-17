@@ -2,9 +2,9 @@
 <?php
 require "conexao.php";
 
+require "telaLogin.php";
 
 
-$pdo = new mysqli("localhost", "root","", "Farmacia");
 
 
 if ($pdo->connect_error) {
@@ -22,7 +22,7 @@ $result = $pdo->query($sql);
 
 if ($result->num_rows > 0) {
     
-    header("Location: cadastro.php");
+    header("Location: telaCadastro.php");
     exit;
 } else {
   
