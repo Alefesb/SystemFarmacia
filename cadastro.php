@@ -11,13 +11,13 @@ if ($pdo->connect_error) {
 $nome = $_POST["Nome"];
 $preço = $_POST["Preço"];
 $categoria = $_POST["cat"];
-$data = $_POST["data"];
+$validade = $_POST["validade"];
 $quantidade = $_POST["qtd"];
 
 
-$sql = "INSERT INTO cadastro (nome, preço, qtd, cat, data) VALUES (?, ?, ?, ?, ?)";
+$sql = "INSERT INTO cadastro (nome, preço, qtd, cat, validade) VALUES (?, ?, ?, ?, ?)";
 $stmt = $pdo->prepare($sql);
-$stmt->bind_param("sssss", $nome, $preço, $quantidade, $categoria, $data);
+$stmt->bind_param("sssss", $nome, $preço, $quantidade, $categoria, $validade);
 
 
 if ($stmt->execute()) {

@@ -48,9 +48,9 @@
       
       
       <select name="cat" id="" name="cat" required>
-        <option value="">Analgésico</option>
-        <option value="">Antibiótico</option>
-        <option value="">Anti-inflamatório</option>
+        <option value="Analgesico">Analgésico</option>
+        <option value="Antibiotico">Antibiótico</option>
+        <option value="Antiinflamatorio">Anti-inflamatório</option>
       </select>
       <div class="invalid-feedback">
         Please choose a username.

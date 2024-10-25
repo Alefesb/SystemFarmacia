@@ -8,37 +8,38 @@
     <link rel="stylesheet" href="lista.php">
   </head>
 <body>
-<table class="table">
-  <thead>
-    <tr>
-      
-      <th scope="col">Nome do Remedio</th>
-      <th scope="col">Categoria</th>
-      <th scope="col">Preço</th>
-      <th scope="col">Data de Validade</th>
-      
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row"></th>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row"></th>
-      <td colspan="2"></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+  <form method="post" action="lista.php">
+
+  
+  <table class="table table-bordered mt-3">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Categoria</th>
+                <th>Validade</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+        <?php 
+            include 'lista.php';
+
+            while($user_data = mysqli_fetch_assoc($result)){
+              echo "<tr>";
+              echo "<td>".$user_data['id']."</td>";
+              echo "<td>".$user_data['nome']."</td>";
+              echo "<td>".$user_data['preço']."</td>";
+              echo "<td>".$user_data['cat']."</td>";
+              echo "<td>".$user_data['validade']."</td>";
+            }
+             ?>
+        </tbody>
+    </table>
+  
+  </form>
+
 </body>
 
 </html>

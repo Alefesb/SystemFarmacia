@@ -4,12 +4,12 @@ require "conexao.php";
 
 require "telaLogin.php";
 
-
-
-
 if ($pdo->connect_error) {
     die("Conexão falhou: " . $pdo->connect_error);
 }
+
+
+
 
 
 $username = $_POST['username'];
